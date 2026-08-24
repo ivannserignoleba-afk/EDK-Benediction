@@ -6,7 +6,16 @@ const img=id=>id.startsWith('http')?id:`https://images.unsplash.com/${id}?auto=f
 const commons=name=>`https://commons.wikimedia.org/wiki/Special:Redirect/file/${name}?width=900`;
 const services=[
 {name:'Coiffure',icon:'✂',image:img('photo-1522337360788-8b13dee7a37e'),models:[['Brushing','3 000 FCFA','photo-1522337360788-8b13dee7a37e'],['Coupe femme','5 000 FCFA','photo-1560869713-da86a9ec1e2d'],['Mise en beauté','8 000 FCFA','photo-1595476108010-b4d1f102b1b1'],['Chignon cérémonie','12 000 FCFA','photo-1487412720507-e7ab37603c6f']]},
-{name:'Tresses & Nattes',icon:'✦',image:commons('African girl braids.jpg'),models:[['Nattes africaines','2 000 FCFA',commons('African girl braids.jpg')],['Cornrows africaines','5 000 FCFA',commons('Cornrow Hairstyling.jpg')],['Box braids','15 000 FCFA',commons('African damsel.jpg')],['Tresses africaines avec perles','20 000 FCFA',commons('Beads or wireworks.jpg')]]},
+{name:'Tresses & Nattes',icon:'✦',image:commons('African girl braids.jpg'),models:[
+['Nattes africaines','2 000 FCFA',commons('African girl braids.jpg')],
+['Cornrows africaines','5 000 FCFA',commons('Cornrow Hairstyling.jpg')],
+['Box braids','15 000 FCFA',commons('African damsel.jpg')],
+['Tresses africaines avec perles','20 000 FCFA',commons('Beads or wireworks.jpg')],
+['Tresses longues','12 000 FCFA',commons('African girl braids.jpg')],
+['Nattes collées design','8 000 FCFA',commons('Cornrow Hairstyling.jpg')],
+['Tresses jumbo','18 000 FCFA',commons('African damsel.jpg')],
+['Tresses avec accessoires','20 000 FCFA',commons('Beads or wireworks.jpg')]
+]},
 {name:'Manucure',icon:'♡',image:img('photo-1604654894610-df63bc536371'),models:[['Limage & finition','500 FCFA','photo-1604654894610-df63bc536371'],['Manucure classique','2 000 FCFA','photo-1610992015732-2449b76344bc'],['French','5 000 FCFA','photo-1604654894610-df63bc536371'],['Gel','8 000 FCFA','photo-1571290274554-6a2eaa771e5f']]},
 {name:'Pédicure',icon:'◌',image:img('photo-1519014816548-bf5fe059798b'),models:[['Finition ongles','1 000 FCFA','photo-1519014816548-bf5fe059798b'],['Soin classique','3 000 FCFA','photo-1588359348347-9bc6cbbb689e'],['Beauté des pieds','5 000 FCFA','photo-1519014816548-bf5fe059798b'],['Pédicure complète','8 000 FCFA','photo-1519014816548-bf5fe059798b']]},
 {name:'Maquillage',icon:'✿',image:img('photo-1516975080664-ed2fc6a32937'),models:[['Maquillage léger','5 000 FCFA','photo-1516975080664-ed2fc6a32937'],['Naturel','7 000 FCFA','photo-1487412720507-e7ab37603c6f'],['Soirée','10 000 FCFA','photo-1516975080664-ed2fc6a32937'],['Cérémonie','15 000 FCFA','photo-1526045478516-99145907023c']]},
