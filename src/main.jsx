@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import './style.css';
-const WA_NUMBER='2250757432898';const WA_LINK=`https://wa.me/${WA_NUMBER}`;const MAP_QUERY='EDK Bénédiction Daloa Côte d’Ivoire';const img=id=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
+const WA_NUMBER='2250757432898';const WA_LINK=`https://wa.me/${WA_NUMBER}`;const MAP_QUERY='EDK Bénédiction Daloa Côte d’Ivoire';const img=id=>id.startsWith('http')?id:`https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=85`;
+const braidImg=name=>`https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(name)}`;
 const services=[
 {name:'Coiffure',icon:'✂',image:img('photo-1522337360788-8b13dee7a37e'),models:[['Brushing','3 000 FCFA','photo-1522337360788-8b13dee7a37e'],['Coupe femme','5 000 FCFA','photo-1560869713-da86a9ec1e2d'],['Mise en beauté','8 000 FCFA','photo-1595476108010-b4d1f102b1b1'],['Chignon cérémonie','12 000 FCFA','photo-1487412720507-e7ab37603c6f']]},
-{name:'Tresses & Nattes',icon:'✦',image:img('photo-1605497788044-5a32c7078486'),models:[['Nattes simples','2 000 FCFA','photo-1535585209827-a15fc9f17564'],['Cornrows','5 000 FCFA','photo-1605497788044-5a32c7078486'],['Box braids','15 000 FCFA','photo-1595152772835-219674b2a8a6'],['Nattes africaines','20 000 FCFA','photo-1529139574466-a303027c1d8b']]},
+{name:'Tresses & Nattes',icon:'✦',image:braidImg('African girl braids.jpg'),models:[['Nattes simples','2 000 FCFA','African girl braids.jpg'],['Cornrows africaines','5 000 FCFA','Cornrow Hairstyling.jpg'],['Box braids','15 000 FCFA','African damsel.jpg'],['Tresses africaines avec perles','20 000 FCFA','Osogbo Ogun Festival 2026 (Cowrie Crown).jpg']]},
 {name:'Manucure',icon:'♡',image:img('photo-1604654894610-df63bc536371'),models:[['Limage & finition','500 FCFA','photo-1604654894610-df63bc536371'],['Manucure classique','2 000 FCFA','photo-1610992015732-2449b76344bc'],['French','5 000 FCFA','photo-1604654894610-df63bc536371'],['Gel','8 000 FCFA','photo-1571290274554-6a2eaa771e5f']]},
 {name:'Pédicure',icon:'◌',image:img('photo-1519014816548-bf5fe059798b'),models:[['Finition ongles','1 000 FCFA','photo-1519014816548-bf5fe059798b'],['Soin classique','3 000 FCFA','photo-1588359348347-9bc6cbbb689e'],['Beauté des pieds','5 000 FCFA','photo-1519014816548-bf5fe059798b'],['Pédicure complète','8 000 FCFA','photo-1519014816548-bf5fe059798b']]},
 {name:'Maquillage',icon:'✿',image:img('photo-1516975080664-ed2fc6a32937'),models:[['Maquillage léger','5 000 FCFA','photo-1516975080664-ed2fc6a32937'],['Naturel','7 000 FCFA','photo-1487412720507-e7ab37603c6f'],['Soirée','10 000 FCFA','photo-1516975080664-ed2fc6a32937'],['Cérémonie','15 000 FCFA','photo-1526045478516-99145907023c']]},
