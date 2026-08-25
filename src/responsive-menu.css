@@ -1,0 +1,85 @@
+/* Menu hamburger + responsive navigation EDK Bénédiction */
+.edk-hamburger{
+  display:none;
+  width:44px;
+  height:44px;
+  padding:0;
+  border:1px solid #f2d7e5;
+  border-radius:12px;
+  background:#ff1493;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+  flex-shrink:0;
+  box-shadow:0 8px 22px rgba(255,20,147,.2);
+}
+.edk-hamburger span{
+  display:block;
+  width:21px;
+  height:2px;
+  border-radius:3px;
+  background:#fff;
+  transition:.25s ease;
+}
+.edk-hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.edk-hamburger.active span:nth-child(2){opacity:0}
+.edk-hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media(max-width:800px){
+  header{position:sticky;top:0}
+  header nav.edk-mobile-nav{
+    display:none !important;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    width:100%;
+    max-width:none;
+    height:auto;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:18px 6vw 24px;
+    background:rgba(255,255,255,.98);
+    border-top:1px solid #f2d7e5;
+    border-bottom:1px solid #f2d7e5;
+    box-shadow:0 18px 35px rgba(255,20,147,.12);
+    flex-direction:column;
+    align-items:stretch;
+    gap:6px;
+    white-space:normal;
+    backdrop-filter:blur(15px);
+  }
+  header nav.edk-mobile-nav.open{display:flex !important}
+  header nav.edk-mobile-nav a:not(.cta),
+  header nav.edk-mobile-nav .cta{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    min-height:46px;
+    padding:12px 14px;
+    border-radius:12px;
+    font-size:13px;
+  }
+  header nav.edk-mobile-nav a:not(.cta):hover{
+    background:#fff0f7;
+    transform:none;
+  }
+  header nav.edk-mobile-nav .cta{
+    justify-content:center;
+    margin-top:8px;
+  }
+  .edk-hamburger{display:flex}
+}
+
+@media(min-width:801px){
+  .edk-hamburger{display:none !important}
+}
+
+@media(max-width:360px){
+  .edk-hamburger{width:40px;height:40px}
+  header nav.edk-mobile-nav{padding-left:5vw;padding-right:5vw}
+}
